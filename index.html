@@ -30,7 +30,7 @@
             class="flex gap-3 items-center px-4 py-3 rounded-full bg-slate-200"
           >
             <div><img src="assets/checkbox.png" alt="Checkbox" /></div>
-            <span class="font-bold text-2xl">24</span>
+            <span id="total-completed-task" class="font-bold text-2xl">23</span>
           </div>
           <!-- color wheel -->
           <button class="p-2 rounded-full bg-slate-200">
@@ -51,12 +51,13 @@
             </div>
             <div>
               <p class="text-sm">Task Assigned</p>
-              <h2 class="text-2xl font-bold">05</h2>
+              <h2 id="total-assigned-task" class="text-2xl font-bold">06</h2>
             </div>
           </div>
 
           <!-- discover button -->
           <button
+            id="discover-btn"
             class="px-8 py-4 rounded-xl col-span-2 bg-gradient-to-br from-[#3752fd] to-[#9BA8F8] flex items-center gap-4"
           >
             <div><img src="assets/board.png" alt="" /></div>
@@ -96,7 +97,9 @@
                 <p class="text-sm">Deadline</p>
                 <h4 class="font-medium">21 March 2025</h4>
               </div>
-              <button class="btn btn-primary bg-accent text-white border-none">
+              <button
+                class="btn btn-primary bg-accent text-white border-none completed-btn"
+              >
                 Completed
               </button>
             </div>
@@ -120,7 +123,9 @@
                 <p class="text-sm">Deadline</p>
                 <h4 class="font-medium">21 March 2025</h4>
               </div>
-              <button class="btn btn-primary bg-accent text-white border-none">
+              <button
+                class="btn btn-primary bg-accent text-white border-none completed-btn"
+              >
                 Completed
               </button>
             </div>
@@ -144,7 +149,9 @@
                 <p class="text-sm">Deadline</p>
                 <h4 class="font-medium">21 March 2025</h4>
               </div>
-              <button class="btn btn-primary bg-accent text-white border-none">
+              <button
+                class="btn btn-primary bg-accent text-white border-none completed-btn"
+              >
                 Completed
               </button>
             </div>
@@ -168,7 +175,9 @@
                 <p class="text-sm">Deadline</p>
                 <h4 class="font-medium">21 March 2025</h4>
               </div>
-              <button class="btn btn-primary bg-accent text-white border-none">
+              <button
+                class="btn btn-primary bg-accent text-white border-none completed-btn"
+              >
                 Completed
               </button>
             </div>
@@ -192,7 +201,9 @@
                 <p class="text-sm">Deadline</p>
                 <h4 class="font-medium">21 March 2025</h4>
               </div>
-              <button class="btn btn-primary bg-accent text-white border-none">
+              <button
+                class="btn btn-primary bg-accent text-white border-none completed-btn"
+              >
                 Completed
               </button>
             </div>
@@ -216,7 +227,9 @@
                 <p class="text-sm">Deadline</p>
                 <h4 class="font-medium">21 March 2025</h4>
               </div>
-              <button class="btn btn-primary bg-accent text-white border-none">
+              <button
+                class="btn btn-primary bg-accent text-white border-none completed-btn"
+              >
                 Completed
               </button>
             </div>
@@ -232,18 +245,22 @@
             <span>Activity Log</span>
           </div>
           <div>
-            <button class="btn btn-primary bg-accent text-white border-none">
+            <button
+              id="clear-history-btn"
+              class="btn btn-primary bg-accent text-white border-none"
+            >
               Clear History
             </button>
           </div>
         </header>
         <hr class="border-blue-300 w-full border-dashed" />
-        <div class="p-6 space-y-7">
-          <div class="bg-slate-200 rounded-lg p-3">test action</div>
-        </div>
+        <div class="p-6 space-y-4" id="activity-log"></div>
       </section>
     </main>
 
     <script src="utilities/utility.js"></script>
+    <script src="scripts/discover.js"></script>
+    <script src="scripts/task.js"></script>
+    <script src="scripts/history.js"></script>
   </body>
 </html>
