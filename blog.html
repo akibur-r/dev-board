@@ -4,16 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Dev Board</title>
-    <link rel="stylesheet" href="styles/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body class="font-poppins">
-    <h1>Hello, Dev Board Blogs! I am being cooked. Coming soon.</h1>
+  <body class="font-poppins bg-slate-200 py-5 text-primary">
+    <header class="max-w-screen-xl mx-auto mb-5 bg-white rounded-xl">
+      <nav class="flex justify-between items-center px-6 py-3 shadow-md">
+        <!-- logo -->
+        <div class="flex items-center gap-2">
+          <div class="w-7/12">
+            <img src="assets/logo.png" alt="Dev Board logo" />
+          </div>
+          <h1 class="text-2xl">Dev<span class="font-bold">Board</span></h1>
+        </div>
+
+        <!-- nav items -->
+        <div>
+          <a href="index.html" class="btn btn-primary bg-accent text-white"
+            >Back to Desk</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto mb-5">
+      <header class="mb-6">
+        <h2 class="font-bold text-center text-2xl">Blogs</h2>
+      </header>
+
+      <section>
+        <div
+          class="py-6 rounded-sm bg-white space-y-3 flex flex-col justify-between"
+        >
+          <header class="space-y-4 px-5">
+            <h3 class="text-xl font-semibold">
+              Question 1: Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Consectetur, id!
+            </h3>
+          </header>
+          <hr class="border-blue-300 w-full border-dashed" />
+          <div class="px-5 opacity-70">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            fugiat quis iusto culpa aliquam fugit velit, eos repellendus soluta
+            maxime eligendi, a eaque suscipit natus id? Cum id atque possimus!
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="utilities/utility.js"></script>
   </body>

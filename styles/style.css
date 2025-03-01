@@ -4,3 +4,19 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
+
+.bg-primary {
+  background-color: #00303c;
+}
+
+.bg-accent {
+  background-color: #3752fd;
+}
+
+.text-primary {
+  color: #00303c;
+}
+
+.text-accent {
+  color: #3752fd;
+}
