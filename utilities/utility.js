@@ -36,3 +36,31 @@ function handleCompleted(element) {
 
     alert("Board Updated Successfully");
 }
+
+function getHexColorCode() {
+    let colorCode = "#";
+    const hexList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+    
+    for(let i=0; i<6; i++) {
+        const randomNumber = Math.floor(Math.random() * 100) % 16;
+        colorCode += hexList[randomNumber];
+    }
+
+    return colorCode;
+}
+
+function getRGBAColorCode() {
+    let colorCode = "rgba(";
+    let temp = String(Math.floor(Math.random() * 1000) % 256);
+    colorCode += temp + ', ';
+    
+    temp = String(Math.floor(Math.random() * 1000) % 256);
+    colorCode += temp + ', ';
+    
+    temp = String(Math.floor(Math.random() * 1000) % 256);
+    colorCode += temp + ', 0.35)';
+
+    return colorCode;
+
+    // alert(colorCode);
+}

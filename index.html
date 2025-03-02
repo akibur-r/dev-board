@@ -12,7 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body class="font-poppins bg-slate-200 py-5 text-primary">
+  <body id="body" class="font-poppins bg-slate-200 py-5 text-primary">
     <header class="max-w-screen-xl mx-auto mb-5 bg-white rounded-xl">
       <nav class="flex justify-between items-center px-6 py-5">
         <!-- logo -->
@@ -33,7 +33,7 @@
             <span id="total-completed-task" class="font-bold text-2xl">23</span>
           </div>
           <!-- color wheel -->
-          <button class="p-2 rounded-full bg-slate-200">
+          <button id="color-wheel" class="p-2 rounded-full bg-slate-200">
             <img src="assets/theme-btn.png" alt="" />
           </button>
         </div>
@@ -281,5 +281,6 @@
     <script src="scripts/task.js"></script>
     <script src="scripts/history.js"></script>
     <script src="scripts/date.js"></script>
+    <script src="scripts/color-wheel.js"></script>
   </body>
 </html>
