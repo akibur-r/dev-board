@@ -14,7 +14,9 @@
   </head>
   <body id="body" class="font-poppins bg-slate-200 py-5 text-primary">
     <header class="max-w-screen-xl mx-auto mb-5 bg-white rounded-xl">
-      <nav class="flex justify-between items-center px-6 py-5">
+      <nav
+        class="flex justify-center md:justify-between gap-2 md:gap-0 items-center px-6 py-5 flex-wrap"
+      >
         <!-- logo -->
         <div class="flex items-center gap-2">
           <div class="w-7/12">
@@ -40,10 +42,12 @@
       </nav>
     </header>
 
-    <main class="max-w-screen-xl mx-auto mb-5 grid gap-5 grid-cols-10">
+    <main class="max-w-screen-xl mx-auto mb-5 md:grid gap-5 grid-cols-10">
       <!-- main tasks section -->
       <section class="bg-white rounded-xl col-span-8">
-        <header class="grid grid-cols-4 gap-4 p-4">
+        <header
+          class="grid grid-cols-1 md:grid-cols-4 gap-y-2 md:gap-y-0 md:gap-4 p-4"
+        >
           <!-- task assigned -->
           <div class="p-4 rounded-xl flex gap-3 items-center bg-slate-200">
             <div class="p-4 bg-white rounded-full">
@@ -78,7 +82,7 @@
           </div>
         </header>
         <hr class="border-blue-300 w-full border-dashed" />
-        <div class="p-4 grid grid-cols-3 gap-6">
+        <div class="p-4 grid md:grid-cols-3 gap-6">
           <!-- card 1 shopease -->
           <div
             class="px-5 py-6 rounded-xl bg-slate-200 space-y-3 flex flex-col justify-between"

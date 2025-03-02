@@ -58,7 +58,7 @@ function getRGBAColorCode() {
     colorCode += temp + ', ';
     
     temp = String(Math.floor(Math.random() * 1000) % 256);
-    colorCode += temp + ', 0.35)';
+    colorCode += temp + ', 0.5)';
 
     return colorCode;
 
