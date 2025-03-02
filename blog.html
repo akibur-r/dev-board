@@ -14,7 +14,9 @@
   </head>
   <body class="font-poppins bg-slate-200 py-5 text-primary">
     <header class="max-w-screen-xl mx-auto mb-5 bg-white rounded-xl">
-      <nav class="flex justify-between items-center px-6 py-3 shadow-md">
+      <nav
+        class="flex flex-wrap gap-y-3 md:gap-y-0 justify-center md:justify-between items-center px-6 py-3 shadow-md"
+      >
         <!-- logo -->
         <div class="flex items-center gap-2">
           <div class="w-7/12">
@@ -37,21 +39,203 @@
         <h2 class="font-bold text-center text-2xl">Blogs</h2>
       </header>
 
-      <section>
+      <section class="flex flex-col gap-4 break-all md:break-keep">
+        <!-- q-1 -->
         <div
-          class="py-6 rounded-sm bg-white space-y-3 flex flex-col justify-between"
+          class="py-6 rounded-md bg-white space-y-3 flex flex-col justify-between"
         >
-          <header class="space-y-4 px-5">
-            <h3 class="text-xl font-semibold">
-              Question 1: Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Consectetur, id!
-            </h3>
-          </header>
+          <h3 class="px-5 text-xl font-semibold">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h3>
           <hr class="border-blue-300 w-full border-dashed" />
-          <div class="px-5 opacity-70">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            fugiat quis iusto culpa aliquam fugit velit, eos repellendus soluta
-            maxime eligendi, a eaque suscipit natus id? Cum id atque possimus!
+          <div class="px-8 opacity-70">
+            <ol class="list-decimal flex flex-col gap-2">
+              <li>
+                <h4 class="font-medium text-lg">Using querySelector</h4>
+                <p>
+                  An element can be selected using .querySelector() method. For
+                  example, to select the element with 'test' id, the syntax will
+                  be:
+                  <span class="font-medium"
+                    >document.querySelector('#test')</span
+                  >This returns only one element matching the provided query.
+                </p>
+              </li>
+
+              <li>
+                <h4 class="font-medium text-lg">Using querySelectorAll</h4>
+                <p>
+                  An element can be selected using .querySelectorAll() method.
+                  For example, to select the elements with 'test' class, the
+                  syntax will be:
+                  <span class="font-medium"
+                    >document.querySelectorAll('.test')</span
+                  >This returns a list of the element matching the provided
+                  query in NodeList format, which is an array-like object.
+                </p>
+              </li>
+
+              <li>
+                <h4 class="font-medium text-lg">Using getElementById</h4>
+                <p>
+                  An element can be selected using .getElementById() method. For
+                  example, to select the element with 'test' id, the syntax will
+                  be:
+                  <span class="font-medium">
+                    document.getElementById('test')</span
+                  >. This returns only one element matching the provided id.
+                </p>
+              </li>
+
+              <li>
+                <h4 class="font-medium text-lg">
+                  Using getElementsByClassName
+                </h4>
+                <p>
+                  An element can be selected using .getElementsByClassName()
+                  method. For example, to select the element with 'test' class,
+                  the syntax will be:
+                  <span class="font-medium">
+                    document.getElementsByClassName('test')</span
+                  >. This returns a collection of HTML elements matching the
+                  provided class name, which is an array-like object.
+                </p>
+              </li>
+
+              <li>
+                <h4 class="font-medium text-lg">Using getElementsByTagName</h4>
+                <p>
+                  An element can be selected using .getElementsByTagName()
+                  method. For example, to select the p tags, the syntax will be:
+                  <span class="font-medium">
+                    document.getElementsByTagName('p')</span
+                  >. This returns a collection of HTML elements matching the
+                  provided tag name, which is an array-like object.
+                </p>
+              </li>
+
+              <li>
+                <h4 class="font-medium text-lg">
+                  Using getElementsByTagNameNS
+                </h4>
+                <p>
+                  An element can be selected using .getElementsByTagNameNS()
+                  method. For example, to select the p tags within
+                  http://www.w3.org/2000/svg namespace, the syntax will be:
+                  <span class="font-medium">
+                    document.getElementsByTagNameNS("http://www.w3.org/2000/svg",
+                    "p")</span
+                  >. This returns a collection of HTML elements matching the
+                  provided tag name within the namespace, which is an array-like
+                  object.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- q-2 -->
+        <div
+          class="py-6 rounded-md bg-white space-y-3 flex flex-col justify-between"
+        >
+          <h3 class="px-5 text-xl font-semibold">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </h3>
+          <hr class="border-blue-300 w-full border-dashed" />
+          <div class="px-8 opacity-80">
+            <ol class="list-decimal flex flex-col gap-2">
+              <li>
+                innerHTML returns the whole element including the tag, comment,
+                text, class, id and all other attributes.
+              </li>
+              <li>
+                innerText returns the visible and explicit texts inside an
+                element only.
+              </li>
+              <li>textContent returns all the texts inside an element.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- q-3 -->
+        <div
+          class="py-6 rounded-md bg-white space-y-3 flex flex-col justify-between"
+        >
+          <h3 class="px-5 text-xl font-semibold">
+            Question-3: What is event delegation in the DOM?
+          </h3>
+          <hr class="border-blue-300 w-full border-dashed" />
+          <div class="px-5 opacity-80">
+            When we add a single event listener to the parent element instead of
+            adding multiple event listeners to the child elements, that's called
+            event delegation. We can take advantage of event bubbling and
+            efficiently handle the children when an event occurs.
+          </div>
+        </div>
+
+        <!-- q-4 -->
+        <div
+          class="py-6 rounded-md bg-white space-y-3 flex flex-col justify-between"
+        >
+          <h3 class="px-5 text-xl font-semibold">
+            Question-4: What is event bubbling in the DOM?
+          </h3>
+          <hr class="border-blue-300 w-full border-dashed" />
+          <div class="px-5 opacity-80">
+            When we trigger an event on an element, the event listener digs
+            through all the elements from the root in the hierarchy to find the
+            actual target of the event. When the target is found, the parents
+            are dropped and the target is caught. It's called event bubbling.
+          </div>
+        </div>
+
+        <!-- q-5 -->
+        <div
+          class="py-6 rounded-md bg-white space-y-3 flex flex-col justify-between"
+        >
+          <h3 class="px-5 text-xl font-semibold">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h3>
+          <hr class="border-blue-300 w-full border-dashed" />
+          <div class="px-8 opacity-80">
+            <ul class="list-disc flex flex-col gap-2">
+              <li>
+                <h4 class="text-lg font-medium">Creating Element</h4>
+                <p class="opacity-90">
+                  We can create an element using JavaScript by using the
+                  createElement function. The syntax to create a paragraph
+                  element is:
+                  <span class="font-medium">document.createElement('p')</span>
+                </p>
+              </li>
+
+              <li>
+                <h4 class="text-lg font-medium">Creating Adding</h4>
+                <p class="opacity-90">
+                  We have to target the parent element. Then we have to use the
+                  appendChild method to add an element. The syntax to add the
+                  created paragraph element to the body element is:
+                  <span class="font-medium"
+                    >document.getElementByTagName('body').appendChild(document.createElement('p'))</span
+                  >
+                </p>
+              </li>
+
+              <li>
+                <h4 class="text-lg font-medium">Creating Adding</h4>
+                <p class="opacity-90">
+                  We have to target the parent element. Then we have to use the
+                  removeChild method to add an element. The syntax to remove the
+                  added paragraph element to the body element is:
+                  <span class="font-medium"
+                    >document.getElementByTagName('body').removeChild(document.getElementByTagName('p'))</span
+                  >
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
