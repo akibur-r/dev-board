@@ -20,9 +20,9 @@ function handleCompleted(element) {
     const initial_hr = date.getHours();
 
     const timePeriod = initial_hr >= 12 ? 'PM' : 'AM';
-    const hr = (initial_hr % 12)==0? 12 : (initial_hr % 12);
-    const min = date.getMinutes();
-    const sec = date.getSeconds(); 
+    const hr = String((initial_hr % 12)==0? 12 : (initial_hr % 12)).padStart(2, '0');
+    const min = String(date.getMinutes()).padStart(2, '0');
+    const sec = String(date.getSeconds()).padStart(2, '0'); 
 
     const message = `You have Completed The Task ${taskName} at ${hr}:${min}:${sec} ${timePeriod}`
 
@@ -33,4 +33,6 @@ function handleCompleted(element) {
     messageElement.classList.add('bg-slate-200');
     console.log(messageElement);
     document.getElementById('activity-log').appendChild(messageElement);
+
+    alert("Board Updated Successfully");
 }
